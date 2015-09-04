@@ -7,5 +7,6 @@
 * [git命令git-tag](contents/git-tag.md)
 * [git命令git-config](contents/git-config.md)
 * [git命令git-shortlog](contents/git-shortlog.md)
+* [git命令git-help](contents/git-help.md)
 * [git图形化工具](contents/git-gui-tool.md)
 * [git可视化diff与merge工具](contents/git-visual-diff-and-merge-tool.md)

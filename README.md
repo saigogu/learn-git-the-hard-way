@@ -5,3 +5,4 @@
 * [git命令git-clone](contents/git-clone.md)
 * [git命令git-add](contents/git-add.md)
 * [git命令git-tag](contents/git-tag.md)
+* [git命令git-config](contents/git-config.md)

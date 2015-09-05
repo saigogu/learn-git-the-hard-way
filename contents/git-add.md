@@ -136,19 +136,19 @@ nothing to commit, working directory clean
 
 ## 例子
 
-**添加当全目录下的全部文件和目录到git**
+> 添加当全目录下的全部文件和目录到git
 
 ```shell
 git add .
 ```
 
-**仅添加当前目录下已有文件的变动（不包括新增文件）**
+> 仅添加当前目录下已有文件的变动（不包括新增文件）
 
 ```shell
 git add -u .
 ```
 
-**添加当前目录下文件时忽略 .gitignore 文件的配置**
+> 添加当前目录下文件时忽略 .gitignore 文件的配置
 
 ```shell
 git add -f .

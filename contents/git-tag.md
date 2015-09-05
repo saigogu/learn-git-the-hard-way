@@ -48,7 +48,7 @@ git tag v1.0.0 <sha1-hash>
 
 ## 例子
 
-**列出所有的tag**
+> 列出所有的tag
 
 ```shell
 git tag
@@ -56,19 +56,19 @@ git tag
 git tag -l | --list
 ```
 
-**产生一个轻量级的tag**
+> 产生一个轻量级的tag
 
 ```shell
 git tag v1.0.0 <sha1-hash>
 ```
 
-**产生一个带附加信息的tag**
+> 产生一个带附加信息的tag
 
 ```shell
 git tag -a -m "<tag-msg>" v1.0.0 <sha1-hash>
 ```
 
-**强制产生一个tag，即使同名tag已经存在**
+> 强制产生一个tag，即使同名tag已经存在
 
 ```shell
 git tag -f v1.0.0

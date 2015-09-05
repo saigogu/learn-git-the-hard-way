@@ -25,19 +25,19 @@ git clone git@github.com:git/git.git
 
 以下使用的git库以git自身的代码为例。
 
-**获取一个git库的内容**：
+> 获取一个git库的内容
 
 ```shell
 git clone https://github.com/git/git.git
 ```
 
-**在克隆时指定一个库的远端名为 `github` 分支名为 `develop`**
+> 在克隆时指定一个库的远端名为 github 分支名为 develop
 
 ```shell
 git clone --origin "github" --branch "develop" https://github.com/git/git.git
 ```
 
-**在克隆时仅获取最新的代码，不获取历史信息**
+> 在克隆时仅获取最新的代码，不获取历史信息
 
 ```shell
 git clone --depth 1 https://github.com/git/git.git

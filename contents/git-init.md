@@ -10,19 +10,19 @@
 
 ## 例子
 
-**创建一个叫 myrepo 的git库**
+> 创建一个叫 myrepo 的git库
 
 ```shell
 git init myrepo
 ```
 
-**将已有的目录转化为一个git库**
+> 将已有的目录转化为一个git库
 
 ```shell
 git init /path/to/repo
 ```
 
-**创建一个没有 working copy 的裸库**
+> 创建一个没有 working copy 的裸库
 
 ```shell
 git init --bare /path/to/repo

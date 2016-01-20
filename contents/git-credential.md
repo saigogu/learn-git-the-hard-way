@@ -1,20 +1,23 @@
 ## git credential
 
-> 首先声明几点，下文默认读者已经拥有以下技能：
+> 首先声明几点，下文默认读者已经掌握以下知识和技能：
 >
 > 1. 基础的svn和git使用技能
-> 2. 熟悉OS X系统下[Keychain Access](https://en.wikipedia.org/wiki/Keychain_(software))软件的功能和基础使用
-> 3. 熟悉Windows系统下[Credential Manager](http://windows.microsoft.com/en-us/windows7/what-is-credential-manager)软件的功能和基础使用（这里的Windows指Windows7以及更高的版本）
+> 2. 熟悉OS X系统下[Keychain Access（钥匙串访问）](https://en.wikipedia.org/wiki/Keychain_(software))软件的功能和基础使用
+> 3. 熟悉Windows系统下[Credential Manager（凭据管理器）](http://windows.microsoft.com/en-us/windows7/what-is-credential-manager)软件的功能和基础使用（这里的Windows指Windows7以及更高的版本）
 
 
 相信很多人在使用git时都会特别怀念svn命令中提供的`--username`和`--password`选项，
 这是因为在git中没有提供类似的在执行命令时携带用户名和密码的方法。
+
 git默认的做法是每次在需要用户名和密码时都交互式的询问用户，
 这种做法显然是相当低效的，git也认识到了这一点，
-所以git提供了2种内置的解决方案`store`和`cache`。但不管是哪种方案都有一个共同的前提，
+所以git提供了2种内置的解决方案`store`和`cache`。
+
+但不管是哪种方案都有一个共同的前提，
 git针对每个protocol和host的配对记录一次密码，
-例如当git记录了“https://github.com”的用户名和密码后，
-当再次遇到“http://github.com”或“https://www.github.com”还是会再次询问用户名和密码。
+例如当git记录了`https://github.com`的用户名和密码后，
+当再次遇到`http://github.com`或`https://www.github.com`还是会再次询问用户名和密码。
 
 ## store
 
@@ -89,3 +92,12 @@ GCM实现了和在OS X中的git-credential-osxkeychain类似的功能，
 ![windows-credential-manager-after](../images/git-credential-windows-credential-manager-after.png)
 
 这样以后每次git需要用户名和密码时将会由Credential Manager来提供给git，无需用户再次输入。
+
+## 总结
+
+git自带的store和cache都不是特别优雅的解决方案，以明文保存的方法相当不安全，
+建议OS X和Windows平台下的用户分别使用Keychain Access和Credential Manager来加密保存，
+这样既安全，又能获得更多的方便，如Keychain Access可以使用apple账号来备份和同步，
+Credential Manager也提供了导出和导入数据的功能。
+
+总而言之，妈妈再也不用担心我的git用户名和密码了！

@@ -21,7 +21,7 @@ git针对每个protocol和host的配对记录一次密码，
 
 ## store
 
-store把用户名和信息以**明文**方式保存在文件中，配置方法如下：
+store把用户名和信息以`明文`方式保存在文件中，配置方法如下：
 
 ```
 git config --global credential.helper store
@@ -51,14 +51,14 @@ git config --global credential.helper "cache --timeout 3600"
 ```
 
 了解到这儿，对于大部分用户已经完全够用了。但是如果你和我一样，
-受不了使用**store**时的**明文**保存，也受不了使用**cache**时的无法做到永久保存，
-那么下面分别介绍在OS X和Windows系统上的**增强**（加密永久保存）方案。
+受不了使用`store`时的`明文`保存，也受不了使用`cache`时的无法做到永久保存，
+那么下面分别介绍在OS X和Windows系统上的`增强`（加密永久保存）方案。
 
 ## OS X
 
 在OS X上使用`brew`安装git时会默认安装一个叫`git-credential-osxkeychain`的命令，
 这个命令可以提供一种把git的用户名和密码保存在`Keychain Access（钥匙串访问）`软件中的功能，
-使用如下命令即可完成由Keychain Access来**加密保存**和提供git的用户名和密码。
+使用如下命令即可完成由Keychain Access来`加密保存`和提供git的用户名和密码。
 
 ```
 git config --global credential.helper osxkeychain
@@ -82,6 +82,18 @@ git config --global credential.helper osxkeychain
 所以微软在自己的github上开源了一个叫做[Git-Credential-Manager-for-Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)的软件（以下统一使用官方简称GCM），
 GCM实现了和在OS X中的git-credential-osxkeychain类似的功能，
 用来在git和Credential Manager之间做通信。
+
+使用如下命令来确定GCM在安装后成设置了自身：
+
+```
+git config --global credential.helper
+```
+
+如果输出为`manager`则表示已经成功设置，若输出不是`manager`或者无输出则使用如下命令设置：
+
+```
+git config --global credential.helper manager
+```
 
 例如我本机的Credential Manager在使用GCM前没有任何记录。
 

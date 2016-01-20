@@ -12,6 +12,7 @@
 * [git命令git-help](contents/git-help.md)
 * [git图形化工具](contents/git-gui-tool.md)
 * [git可视化diff与merge工具](contents/git-visual-diff-and-merge-tool.md)
+* [git credential](contents/git-credential.md)
 
 ## 问题和改进
 

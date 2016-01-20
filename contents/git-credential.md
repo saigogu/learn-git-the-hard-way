@@ -1,8 +1,9 @@
 ## git credential
 
 > 首先声明几点，下文默认读者已经拥有以下技能：
+>
 > 1. 基础的svn和git使用技能
-> 2. 熟悉OS X系统下[Keychain Access](https://en.wikipedia.org/wiki/Keychain_(software)软件的功能和基础使用
+> 2. 熟悉OS X系统下[Keychain Access](https://en.wikipedia.org/wiki/Keychain_(software))软件的功能和基础使用
 > 3. 熟悉Windows系统下[Credential Manager](http://windows.microsoft.com/en-us/windows7/what-is-credential-manager)软件的功能和基础使用（这里的Windows指Windows7以及更高的版本）
 
 
@@ -64,7 +65,7 @@ git config --global credential.helper osxkeychain
 
 ![osx-keychain-before](../images/git-credential-osx-keychain-access-before.png)
 
-在使用以上命令并且完成第一次输入用户名和密码后搜索`github`时在keychain中已经存在记录。
+在使用以上命令并且完成第一次输入用户名和密码后搜索`github`时在Keychain Access中已经有记录。
 
 ![osx-keychain-after](../images/git-credential-osx-keychain-access-after.png)
 
@@ -76,7 +77,7 @@ git config --global credential.helper osxkeychain
 叫做`Credential Manager（凭据管理器）`，可以在`Control Panel（控制面板）`中找到。
 但这个软件无法直接和git通信，
 所以微软在自己的github上开源了一个叫做[Git-Credential-Manager-for-Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)的软件（以下统一使用官方简称GCM），
-这个软件实现了和在OS X中的git-credential-osxkeychain类似的功能，
+GCM实现了和在OS X中的git-credential-osxkeychain类似的功能，
 用来在git和Credential Manager之间做通信。
 
 例如我本机的Credential Manager在使用GCM前没有任何记录。
